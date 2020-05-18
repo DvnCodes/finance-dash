@@ -1,8 +1,7 @@
 import React from "react";
-import "office-ui-fabric-react/dist/css/fabric.css";
-import "./App.css";
-
-import Navigation from "./Navigation";
+import Navigation from "./Components/Navigation";
+import Cards from "./Components/Cards";
+import { Router } from "@reach/router";
 
 function App() {
   return (
@@ -12,7 +11,11 @@ function App() {
           <Navigation />
         </div>
         <div className="main-element ms-Grid-col ms-sm11 ms-xl11">
-          <div className="ms-Grid-row"></div>
+          <div className="ms-Grid-row">
+            <Router>
+              <Cards path="/dashboard" />
+            </Router>
+          </div>
           <div className="ms-Grid-row"></div>
         </div>
       </div>
