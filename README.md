@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Finance Dash
-Mock fintech dashboard created to practice react and learn FluentUI
+A simple mock fintech dashboard created to practice react and learn FluentUI
 
 
 ## Available Scripts
