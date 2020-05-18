@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import * as data from "../data/clients.json";
 import { Text, initializeIcons } from "@fluentui/react";
 import { Card } from "@uifabric/react-cards";
 import "office-ui-fabric-react/dist/css/fabric.css";
@@ -51,21 +50,15 @@ const styles = {
   },
 };
 
-const clients = data.default;
-
 class Cards extends Component {
   state = { user: {} };
 
-  componentDidMount() {
-    this.setState({ user: clients[0] });
-  }
-
   render() {
+    const { selectedUser } = this.props;
     initializeIcons();
     return (
       <div style={container}>
-        {this.state.user.first_name + " " + this.state.user.last_name}
-        <div className="s-Grid-col ms-sm3 ms-xl3">
+        <div className="s-Grid-col ms-sm6 ms-xl6">
           <Card styles={styles.cardStyles}>
             <Card.Section>
               <Card.Item>
@@ -81,7 +74,28 @@ class Cards extends Component {
                 <Text styles={styles.header}>Balance</Text>
               </Card.Item>
               <Card.Item>
-                <Text styles={styles.amount}>{this.state.user.balance}</Text>
+                <Text styles={styles.amount}>{selectedUser.balance}</Text>
+              </Card.Item>
+            </Card.Section>
+          </Card>
+        </div>
+        <div className="s-Grid-col ms-sm6 ms-xl6">
+          <Card styles={styles.cardStyles}>
+            <Card.Section>
+              <Card.Item>
+                <i
+                  style={icon}
+                  className={
+                    <code data-enlighter-language="raw" class="EnlighterJSRAW">
+                      ms-Icon ms-Icon--'Money'
+                    </code>
+                  }
+                  aria-hidden="true"
+                ></i>
+                <Text styles={styles.header}>Savings</Text>
+              </Card.Item>
+              <Card.Item>
+                <Text styles={styles.amount}>{selectedUser.savings}</Text>
               </Card.Item>
             </Card.Section>
           </Card>

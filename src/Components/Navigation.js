@@ -4,7 +4,6 @@ import { Nav, initializeIcons } from "@fluentui/react";
 const navStyles = {
   root: {
     height: "100vh",
-    width: "20vw",
     boxSizing: "border-box",
     border: "1px solid #eee",
     overflowY: "auto",
@@ -18,7 +17,7 @@ const links = [
       {
         name: "Dashboard",
         key: "key1",
-        url: "/",
+        url: "/dashboard",
         iconProps: {
           iconName: "News",
           styles: {
@@ -30,9 +29,9 @@ const links = [
         },
       },
       {
-        name: "Settings",
+        name: "User",
         key: "key2",
-        url: "/",
+        url: "/user",
         iconProps: {
           iconName: "PlayerSettings",
           styles: {
@@ -43,24 +42,24 @@ const links = [
           },
         },
       },
-      {
-        name: "Transfer",
-        key: "key3",
-        url: "/",
-        iconProps: {
-          iconName: "SwitcherStartEnd",
-          styles: {
-            root: {
-              fontSize: 20,
-              color: "#106ebe",
-            },
-          },
-        },
-      },
+      // {
+      //   name: "Transfer",
+      //   key: "key3",
+      //   url: "/",
+      //   iconProps: {
+      //     iconName: "SwitcherStartEnd",
+      //     styles: {
+      //       root: {
+      //         fontSize: 20,
+      //         color: "#106ebe",
+      //       },
+      //     },
+      //   },
+      // },
       {
         name: "Stats",
         key: "key4",
-        url: "/",
+        url: "/stats",
         iconProps: {
           iconName: "StackedLineChart",
           styles: {
